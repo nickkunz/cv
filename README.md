@@ -1,2 +1,2 @@
 ## Curriculum Vitae
-_Updated: Feb. 2024_
+_Updated: March 2024_
