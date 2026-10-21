@@ -7,11 +7,13 @@
 \usepackage{titling}
 \usepackage{hyperref}
 \usepackage{setspace}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
 \usepackage{fontawesome5}
 \usepackage[none]{hyphenat}
 
 % style
-\geometry{margin = 48pt}
+\geometry{margin = 48pt, footskip = 24pt}
 
 \definecolor{seagreen}{HTML}{A1BF49}
 \definecolor{wowgreen}{HTML}{E5FF63}
@@ -38,113 +40,123 @@
 }
 \date{}
 
-\pagenumbering{gobble}
+\pagenumbering{arabic}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{Pg.\ \thepage/\pageref*{LastPage}}
+\renewcommand{\headrulewidth}{0pt}
+\fancypagestyle{plain}{
+    \fancyhf{}
+    \fancyfoot[C]{Pg.\ \thepage/\pageref*{LastPage}}
+    \renewcommand{\headrulewidth}{0pt}
+}
 
 % text
 \begin{document}
 \maketitle
 \noindent
-Address: \space 602 Rhodes Hall, Ithaca, NY 14853\\
+% Address: \space 602 Rhodes Hall, 136 Hoy Road, Ithaca, NY 14853\\
 Mobile: \space\space +1 $($602$)$ 710-8608\\
 Email: \space\space\space\url{nhk37@cornell.edu}\\
 Website: \space\url{nickkunz.com}
-    
+
 \section*{Research Interests}
-My research interests are at the intersection of data science, machine learning, and complex systems. Many of the questions I ask are motivated by understanding emergent dynamics under evolving real-world constraints. My work has direct applications in housing, transportation, economics, defense, and other areas of societal impact.
+My research interests are at the intersection of data science, machine learning, and complex systems. Many of the questions I ask are motivated by understanding emergent dynamics under evolving real-world constraints. My work has direct applications in urban planning, economics, defense, and other areas of societal impact.
 
 \section*{Education}
-        \textbf{Cornell University} | Ithaca, NY\hfill{2027}\newline
-        Ph.D., Systems Engineering, Artificial Intelligence\newline
-        \textit{Advisors: H. Oliver Gao, Francesca Parise, Wenfei Xu}\newline\newline
-        \textbf{Cornell University} | Ithaca, NY\hfill{2025}\newline
-        M.S., Systems Engineering\newline
-        \textit{Advisors: H. Oliver Gao}\newline\newline
-        \textbf{Columbia University} | New York, NY\hfill{2019}\newline
-        M.S., Urban Planning, Urban Analytics\newline
-        \textit{Advisors: Lance Freeman, Kazuki Sakamoto}\newline\newline
-        \textbf{Harvard University} | Cambridge, MA\hfill{2012}\newline
-        Urban Planning\newline
-        \textit{Advisor: Nick Hornig}\newline\newline
-        \textbf{Arizona State University} | Tempe, AZ\hfill{2012}\newline
-        B.S. $($Hons.$)$, \textit{summa cum laude}, Housing and Urban Development\newline
-        \textit{Advisors: Kevin Kellogg, Michael Underhill, Trevor Barger}
+    \textbf{Cornell University} | Ithaca, NY\hfill{2027}\newline
+    Ph.D., Systems Engineering, Artificial Intelligence\newline
+    \textit{Advisors: H. Oliver Gao, Francesca Parise, Wenfei Xu}\newline\newline
+    \textbf{Cornell University} | Ithaca, NY\hfill{2025}\newline
+    M.S., Systems Engineering\newline
+    \textit{Advisor: H. Oliver Gao}\newline\newline
+    \textbf{Columbia University} | New York, NY\hfill{2019}\newline
+    M.S., Urban Planning, Urban Analytics\newline
+    \textit{Advisors: Lance Freeman, Kazuki Sakamoto}\newline\newline
+    \textbf{Harvard University} | Cambridge, MA\hfill{2012}\newline
+    Non-Degree, Urban Planning\newline
+    \textit{Advisor: Nick Hornig}\newline\newline
+    \textbf{Arizona State University} | Tempe, AZ\hfill{2012}\newline
+    B.S. (Hons.), \textit{summa cum laude}, Housing and Urban Development\newline
+    \textit{Advisors: Kevin Kellogg, Michael Underhill, Trevor Barger}
 
 \section*{Publications}
     \subsection*{Journal Articles}
     \textbf{N. Kunz}, H. O. Gao, ``A General Capacity Frontier of Complex Networks''. 
         \textit{Preprint arXiv:2610.09574}. 2026. \href{https://arxiv.org/abs/2610.09574}{\texttt{[Link]}} \\~\\
-    \textbf{N. Kunz}, H. O. Gao, ``Global Geolocated Realtime Data of Interfleet Urban Transit Bus Idling''. \textit{Preprint arXiv:2403.03489}. 2026. \href{https://doi.org/10.48550/arXiv.2403.03489}{\texttt{[Link]}} \\~\\
-        D. Lu, L. Cui, \textbf{N. Kunz}, et. al., ``Urban Infrastructure and Spatiotemporal Environmental Features for EGFR-Mutant Lung Cancer''. \textit{Preprint medRxiv:18.26353481v1}. 2026. \href{https://doi.org/10.64898/2026.05.18.26353481}{\texttt{[Link]}}\\~\\
+    \textbf{N. Kunz}, H. O. Gao, ``Global Geolocated Realtime Data of Urban Transit Bus Idling''. \textit{Preprint arXiv:2403.03489}. 2026. \href{https://doi.org/10.48550/arXiv.2403.03489}{\texttt{[Link]}} \\~\\
+        D. Lu, L. Cui, \textbf{N. Kunz}, \textit{et al.}, ``Urban Infrastructure and Spatiotemporal Environmental Features for EGFR-Mutant Lung Cancer''. \textit{Preprint medRxiv:18.26353481v1}. 2026. \href{https://doi.org/10.64898/2026.05.18.26353481}{\texttt{[Link]}}\\~\\
         C. Avci, C. Huang, \textbf{N. Kunz}, H. O. Gao, ``uTECH-Population: Synthetic Population Generation with Housing Assignment''. \textit{Under Review.} 2026.
     \subsection*{Conference Proceedings}
-        W. Wu, \textbf{N. Kunz}, P. Branco, ``ImbalancedLearningRegression'' in \textit{Machine Learning and Knowledge Discovery in Databases: European Conference, ECML PKDD, September 19–23, 2022, Grenoble, France,} Proceedings, Part VI, Lecture Notes in Computer Science, vol 13718. Springer, pp. 645–648, 2023. \href{https://doi.org/10.1007/978-3-031-26422-1}{\texttt{[Link]}}
+        W. Wu, \textbf{N. Kunz}, P. Branco, ``ImbalancedLearningRegression'' in \textit{Machine Learning and Knowledge Discovery in Databases: European Conference, ECML PKDD, September 19–23, 2022, Grenoble, France,} Proceedings, Part VI, Lecture Notes in Computer Science, vol 13718. Springer, pp. 645–648, 2023. \href{https://link.springer.com/chapter/10.1007/978-3-031-26422-1_48}{\texttt{[Link]}}
     \subsection*{Working Papers}
-        \textbf{N. Kunz}, H. O. Gao, ``Global Behavioral Patterns of Interfleet Urban Transit Bus Idling''. \textit{In Preparation.} 2026.\\~\\
+        \textbf{N. Kunz}, H. O. Gao, ``Global Geolocated Historical Data of Urban Transit Bus Idling From 2024 to 2026''. \textit{In Preparation.} 2026.\\~\\
         \textbf{N. Kunz}, H. O. Gao, ``Network Constrained Spatial Prediction: Transfer Learning Geolocations''. \textit{In Preparation.} 2026.
     \subsection*{Theses}
-        N. Kunz, ``Structural Systems Intelligence: Network-Constrained Estimation of Global Transit Dynamics,'' Ph.D. Dissertation, Duffield College of Engineering, Cornell Univ., Ithaca, NY, 2027.\newline\newline
-        N. Kunz, ``Unsupervised Learning for Submarket Modeling: A Proxy for Neighborhood Change,'' M.S. Thesis, Grad. Sch. of Arch., Plan., and Pres. (GSAPP), Columbia Univ., New York, NY, 2019. [Online]. Available: Columbia Academic Commons.\space\href{https://doi.org/10.7916/d8-rj87-yx32}{\texttt{[Link]}}\newline\newline
-        N. Kunz, ``Realizing Interactive Architecture: A Driver of the Knowledge Economy,'' B.S. $($Hons.$)$ Thesis, Barrett, The Hons. Col., Arizona State Univ., Tempe, AZ, 2012. Available: Barrett, The Honors College Thesis/Creative Project Collection.\space\href{https://repository.asu.edu/collections/130}{\texttt{[Link]}}
+        \textbf{N. Kunz}, ``Structural Systems Intelligence: Network-Constrained Estimation of Global Transit Dynamics,'' Ph.D. Dissertation, Duffield College of Engineering, Cornell Univ., Ithaca, NY, 2027.\newline\newline
+        \textbf{N. Kunz}, ``Unsupervised Learning for Submarket Modeling: A Proxy for Neighborhood Change,'' M.S. Thesis, Grad. Sch. of Arch., Plan., and Pres. (GSAPP), Columbia Univ., New York, NY, 2019. [Online]. Available: Columbia Academic Commons.\space\href{https://doi.org/10.7916/d8-rj87-yx32}{\texttt{[Link]}}\newline\newline
+        \textbf{N. Kunz}, ``Realizing Interactive Architecture: A Driver of the Knowledge Economy,'' B.S. $($Hons.$)$ Thesis, Barrett, The Hons. Col., Arizona State Univ., Tempe, AZ, 2012. Available: Barrett, The Honors College Thesis/Creative Project Collection.\space\href{https://repository.asu.edu/collections/130}{\texttt{[Link]}}
     \subsection*{Industry Reports}
-        N. Kunz, ``\textit{n}-Dimensional Mapping by Normalized Value Approximation: Squad Immersive Virtual Trainer (SiVT) Safety Performance Metrics,'' Integrated Visual Augmentation System (IVAS), Microsoft, Redmond, WA, 2021. Protected from public disclosure pursuant to: Trade Secrets Act 18 USC § 1905, 5 USC § 552(b)(4), and C3.2.1.4. of US Dept. of Defense Regulation 5400.7-R. DISTRIBUTION F.\newline\newline
-        N. Kunz, ``Normalized \textit{n}-Dimensional Inverse Euclidean Distance: Combining Independent Performance Metrics,'' Integrated Visual Augmentation System (IVAS), Microsoft, Redmond, WA, 2021. Protected from public disclosure pursuant to: Trade Secrets Act 18 USC § 1905, 5 USC § 552(b)(4), and C3.2.1.4. of US Dept. of Defense Regulation 5400.7-R. DISTRIBUTION F.\newline\newline
-        N. Kunz, ``Minimum-Weighted Mean Variability: Within Group Performance Metrics,'' Integrated Visual Augmentation System (IVAS), Microsoft, Redmond, WA, 2020. Protected from public disclosure pursuant to: Trade Secrets Act 18 USC § 1905, 5 USC § 552(b)(4), and C3.2.1.4. of US Dept. of Defense Regulation 5400.7-R. DISTRIBUTION F.\newline\newline
-        N. Kunz, ``An Exploratory Data Analysis of the Gavin Cup: Bringing Readiness \& Performance Metrics Into Focus,'' Integrated Visual Augmentation System (IVAS), Microsoft, Redmond, WA, 2020. Protected from public disclosure pursuant to: Trade Secrets Act 18 USC § 1905, 5 USC § 552(b)(4), and C3.2.1.4. of US Dept. of Defense Regulation 5400.7-R. DISTRIBUTION F.
+        \textbf{N. Kunz}, ``\textit{n}-Dimensional Mapping by Normalized Value Approximation: Squad Immersive Virtual Trainer (SiVT) Safety Performance Metrics,'' Integrated Visual Augmentation System (IVAS), Microsoft, Redmond, WA, 2021. Protected from public disclosure pursuant to: Trade Secrets Act 18 USC § 1905, 5 USC § 552(b)(4), and C3.2.1.4. of US Dept. of Defense Regulation 5400.7-R. DISTRIBUTION F.\newline\newline
+        \textbf{N. Kunz}, ``Normalized \textit{n}-Dimensional Inverse Euclidean Distance: Combining Independent Performance Metrics,'' Integrated Visual Augmentation System (IVAS), Microsoft, Redmond, WA, 2021. Protected from public disclosure pursuant to: Trade Secrets Act 18 USC § 1905, 5 USC § 552(b)(4), and C3.2.1.4. of US Dept. of Defense Regulation 5400.7-R. DISTRIBUTION F.\newline\newline
+        \textbf{N. Kunz}, ``Minimum-Weighted Mean Variability: Within Group Performance Metrics,'' Integrated Visual Augmentation System (IVAS), Microsoft, Redmond, WA, 2020. Protected from public disclosure pursuant to: Trade Secrets Act 18 USC § 1905, 5 USC § 552(b)(4), and C3.2.1.4. of US Dept. of Defense Regulation 5400.7-R. DISTRIBUTION F.\newline\newline
+        \textbf{N. Kunz}, ``An Exploratory Data Analysis of the Gavin Cup: Bringing Readiness \& Performance Metrics Into Focus,'' Integrated Visual Augmentation System (IVAS), Microsoft, Redmond, WA, 2020. Protected from public disclosure pursuant to: Trade Secrets Act 18 USC § 1905, 5 USC § 552(b)(4), and C3.2.1.4. of US Dept. of Defense Regulation 5400.7-R. DISTRIBUTION F.
 
 \section*{Software Packages}
         \textbf{GRD-TRT-BUF-4I: Ground Truth Buffer for Idling}\hfill{2023 - 2027}\newline
-        \faGithub\space Github [ \href{https://github.com/nickkunz/idling}{\texttt{Link}} ] \space \faSmile \space arXiv \space [ \href{https://arxiv.org/abs/2403.03489}{\texttt{Link}} ] \space\faGlobe\space Website \space [ \href{https://idling-interface.gentlecliff-56a5f234.eastus.azurecontainerapps.io/}{\texttt{Link}} ]\newline\newline
+        \faGithub\space GitHub [ \href{https://github.com/nickkunz/idling}{\texttt{Link}} ] \space \faSmile \space arXiv \space [ \href{https://arxiv.org/abs/2403.03489}{\texttt{Link}} ] \space\faGlobe\space Website \space [ \href{https://idling-interface.gentlecliff-56a5f234.eastus.azurecontainerapps.io/}{\texttt{Link}} ]\newline\newline
         A novel algorithm designed as a series of scalable microservices that detects urban transit bus idling in realtime on global scale. Utilizes a combination of templated ETL pipelines to provide a comprehensive view of the emergent behavior of interfleet idling patterns across multiple transit networks around the world.\newline\newline
         % \textbf{PUPHL: Proximal Policy Optimization Utilizing Pseudo-Huber Loss}\hfill{2021}\newline
-        % \faGithub\space Github [ \href{https://github.com/nickkunz/puphl}{\texttt{Link}} ]\newline\newline
+        % \faGithub\space GitHub [ \href{https://github.com/nickkunz/puphl}{\texttt{Link}} ]\newline\newline
         % A modified Proximal Policy Optimization (PPO) policy gradient algorithm. Applies Pseudo-Huber Loss to the critic loss function in place of traditional Mean Squared Error (MSE). Adds additional critic loss function constraint $\delta$ in an effort to further reduce variance to PPO and future policy gradient methods. \textit{Currently in development.}\newline\newline
         \textbf{SMOGN: Synthetic Minority Over-Sampling Technique for Regression with Gaussian Noise}\hfill{2021}\newline
-        \faGithub\space Github [ \href{https://github.com/nickkunz/smogn}{\texttt{Link}} ] \space\faPython\space PyPI\space [ \href{https://pypi.org/project/smogn}{\texttt{Link}} ]\space\faUsers\space Kaggle [ \href{https://www.kaggle.com/aleksandradeis/regression-addressing-extreme-rare-cases}{\texttt{Link}} ]\space\faStackExchange\space Stack Exchange [ \href{https://datascience.stackexchange.com/questions/39232/how-to-make-multiple-regression-perform-better-for-outliers-without-reducing-e/64933#64933}{\texttt{Link}} ]\newline\newline
+        \faGithub\space GitHub [ \href{https://github.com/nickkunz/smogn}{\texttt{Link}} ] \space\faPython\space PyPI\space [ \href{https://pypi.org/project/smogn}{\texttt{Link}} ]\space\faUsers\space Kaggle [ \href{https://www.kaggle.com/aleksandradeis/regression-addressing-extreme-rare-cases}{\texttt{Link}} ]\space\faStackExchange\space Stack Exchange [ \href{https://datascience.stackexchange.com/questions/39232/how-to-make-multiple-regression-perform-better-for-outliers-without-reducing-e/64933#64933}{\texttt{Link}} ]\newline\newline
         A pre-processing algorithm designed to address imbalanced data for regression problems. Conducts over-sampling with traditional interpolation, as well as with the introduction of Gaussian noise. Selects between the two over-sampling techniques by the KNN distances underlying a given observation.\newline\newline
         \textbf{NestedHyperBoost: Nested Cross-Validation for Bayesian Optimized Gradient Boosting}\hfill{2020}\newline
-        \faGithub\space Github [ \href{https://github.com/nickkunz/nestedhyperboost}{\texttt{Link}} ] \space\faPython\space PyPI\space [ \href{https://pypi.org/project/nestedhyperboost}{\texttt{Link}} ]\newline\newline
+        \faGithub\space GitHub [ \href{https://github.com/nickkunz/nestedhyperboost}{\texttt{Link}} ] \space\faPython\space PyPI\space [ \href{https://pypi.org/project/nestedhyperboost}{\texttt{Link}} ]\newline\newline
         Unifies Nested K-Fold Cross-Validation, Bayesian Hyperparameter Optimization, and Gradient Boosting. Designed for rapid prototyping on small to mid-sized data sets. Quickly obtains high quality prediction results by abstracting away tedious hyperparameter tuning and implementation details in favor of usability and implementation speed.\newline\newline
         \textbf{NestedHyperLine: Nested Cross-Validation for Bayesian Optimized Linear Regularization}\hfill{2020}\newline
-        \faGithub\space Github [ \href{https://github.com/nickkunz/nestedhyperline}{\texttt{Link}} ] \space\faPython\space PyPI\space [ \href{https://pypi.org/project/nestedhyperline}{\texttt{Link}} ]\newline\newline
+        \faGithub\space GitHub [ \href{https://github.com/nickkunz/nestedhyperline}{\texttt{Link}} ] \space\faPython\space PyPI\space [ \href{https://pypi.org/project/nestedhyperline}{\texttt{Link}} ]\newline\newline
         Unifies Nested K-Fold Cross-Validation, Bayesian Hyperparameter Optimization, and Linear Regularization. Designed for rapid prototyping on small to mid-sized data sets. Quickly obtains high quality prediction results by abstracting away tedious hyperparameter tuning and implementation details in favor of usability and implementation speed.\newline\newline
         
         \noindent
         \textbf{CRASSMAT: Conditional Random Sampling Sparse Matrices}\hfill{2019}\newline
-        \faGithub\space Github [ \href{https://github.com/nickkunz/crassmat}{\texttt{Link}} ] \space\faRProject\space CRAN\space [ \href{https://cran.r-project.org/web/packages/crassmat/crassmat.pdf}{\texttt{Link}} ]\newline\newline
+        \faGithub\space GitHub [ \href{https://github.com/nickkunz/crassmat}{\texttt{Link}} ] \space\faRProject\space CRAN\space [ \href{https://cran.r-project.org/web/packages/crassmat/crassmat.pdf}{\texttt{Link}} ]\newline\newline
         A novel matrix sampling algorithm designed to conditionally random sample sparse matrices. Useful for training and test set splitting prior to model fitting in cross-validation procedures and for estimating the predictive accuracy of imputation methods, such as NNMF and SVD.
     
 \section*{Selected Projects}
         \textbf{N. Kunz}, S. Huang, S. Osakata, ``Cloudy Night: Activating Park Space by Illuminated Interactivity," Grad. Sch. of Arch., Plan., and Pres. (GSAPP), Columbia Univ., New York, NY, 2019. [Online]. Available:\newline\newline
-        \faTrain\space GSAPP [ \href{https://www.arch.columbia.edu/student-work/7502-cloudy-night}{\texttt{Link}} ]\space\faGithub\space Github [ \href{https://github.com/nickkunz/cloudynight}{\texttt{Link}} ]\space\space \faYoutube\space YouTube [ \href{https://www.youtube.com/watch?v=GWaXrN79Lbw&feature=emb_title}{\texttt{Link}} ]\space\faCertificate\space Faculty [ \href{https://edblogs.columbia.edu/plana6102-001-2019-1/2019/05/10/cloudy-night-activating-park-space-by-illuminated-interactivity-2/}{\texttt{Link}} ]\newline\newline
-        \textbf{N. Kunz} and S. Bhele, ``Signal or Noise? Qualified Opportunity Zone Affect on Development Activity in Queens," Grad. Sch. of Arch., Plan., and Pres. (GSAPP), Columbia Univ., New York, NY, 2019. [Online]. Available:\newline\newline
-        \faTrain\space GSAPP [ \href{https://cdn.filepicker.io/api/file/guXiVLU6QreQgKPPPUG8?&fit=max}{\texttt{Link}} ]\space\faGithub\space Github [ \href{https://github.com/nickkunz/queens-dbscan}{\texttt{Link}} ]\space\faBook\space Issuu [ \href{https://issuu.com/nickkunz/docs/queens_report}{\texttt{Link}} ]\newline\newline
+        \faTrain\space GSAPP [ \href{https://www.arch.columbia.edu/student-work/7502-cloudy-night}{\texttt{Link}} ]\space\faGithub\space GitHub [ \href{https://github.com/nickkunz/cloudynight}{\texttt{Link}} ]\space\space \faYoutube\space YouTube [ \href{https://www.youtube.com/watch?v=GWaXrN79Lbw&feature=emb_title}{\texttt{Link}} ]\space\faCertificate\space Faculty [ \href{https://edblogs.columbia.edu/plana6102-001-2019-1/2019/05/10/cloudy-night-activating-park-space-by-illuminated-interactivity-2/}{\texttt{Link}} ]\newline\newline
+        \textbf{N. Kunz} and S. Bhele, ``Signal or Noise? Qualified Opportunity Zone Effect on Development Activity in Queens," Grad. Sch. of Arch., Plan., and Pres. (GSAPP), Columbia Univ., New York, NY, 2019. [Online]. Available:\newline\newline
+        \faTrain\space GSAPP [ \href{https://cdn.filepicker.io/api/file/guXiVLU6QreQgKPPPUG8?&fit=max}{\texttt{Link}} ]\space\faGithub\space GitHub [ \href{https://github.com/nickkunz/queens-dbscan}{\texttt{Link}} ]\space\faBook\space Issuu [ \href{https://issuu.com/nickkunz/docs/queens_report}{\texttt{Link}} ]\newline\newline
         E. Hudgins and \textbf{N. Kunz}, ``Planning for Extreme Settlements, McMurdo Station, Antarctica," Grad. Sch. of Arch., Plan., and Pres. (GSAPP), Columbia Univ., New York, NY, 2018. [Online]. Available:\newline\newline
         \faTrain\space GSAPP [ \href{https://www.arch.columbia.edu/student-work/5461}{\texttt{Link}} ]\space\faBook\space Issuu [ \href{https://issuu.com/nickkunz/docs/mcmurdo}{\texttt{Link}} ]\newline\newline
-        J. Karasik, S. Lee, \textbf{N. Kunz}, \textit{et. al.} ``Negotiating Fragments (Restructuring Quarto Workshop)," Genoa, Italy, Grad. Sch. of Arch., Plan., and Pres. (GSAPP), Columbia Univ., New York, NY, 2018. [Online]. Available:\newline\newline
+        J. Karasik, S. Lee, \textbf{N. Kunz}, \textit{et al.}, ``Negotiating Fragments (Restructuring Quarto Workshop)," Genoa, Italy, Grad. Sch. of Arch., Plan., and Pres. (GSAPP), Columbia Univ., New York, NY, 2018. [Online]. Available:\newline\newline
         \faTrain\space GSAPP [ \href{https://www.arch.columbia.edu/courses/87029-1878-genoa-italy-negotiating-fragments}{\texttt{Link}} ]\space\faYoutube\space YouTube [ \href{https://www.youtube.com/watch?v=NaVhil1sQfY}{\texttt{Link}} ]\space\faBook\space Issuu [ \href{https://issuu.com/nickkunz/docs/geotagged_genoa}{\texttt{Link}} ]\space\faBook\space Issuu [ \href{https://issuu.com/nickkunz/docs/quarto}{\texttt{Link}} ]\space\faNewspaper\space Press [ \href{http://www.comune.genova.it/content/restructuring-quarto-workshop-le-idee-degli-studenti-della-columbia-university-l39ex-op}{\texttt{Link}} ]\newline\newline
-        N. Kunz, ``Proportionalities: A Decade of Housing Markets to Subway Stations in Manhattan from 2006 to 2016," Grad. Sch. of Arch., Plan., and Pres. (GSAPP), Columbia Univ., New York, NY, 2017. [Online]. Available:\newline\newline
+        \textbf{N. Kunz}, ``Proportionalities: A Decade of Housing Markets to Subway Stations in Manhattan from 2006 to 2016," Grad. Sch. of Arch., Plan., and Pres. (GSAPP), Columbia Univ., New York, NY, 2017. [Online]. Available:\newline\newline
         \faTrain\space GSAPP [ \href{https://www.arch.columbia.edu/student-work/4836}{\texttt{Link}} ]\space\faTrain\space GSAPP [ \href{https://www.arch.columbia.edu/student-work/4835}{\texttt{Link}} ]\space\faBook\space Issuu [ \href{https://issuu.com/nickkunz/docs/gis}{\texttt{Link}} ]\newline\newline
-        N. Kunz, ``Reimaged: John Snow's Cholera Map of 1854, ``Grad. Sch. of Arch., Plan., and Pres. (GSAPP), Columbia Univ., New York, NY, 2017. [Online]. Available:\newline\newline
+        \textbf{N. Kunz}, ``Reimagined: John Snow's Cholera Map of 1854," Grad. Sch. of Arch., Plan., and Pres. (GSAPP), Columbia Univ., New York, NY, 2017. [Online]. Available:\newline\newline
         \faBook\space Issuu [ \href{https://issuu.com/nickkunz/docs/reimagined}{\texttt{Link}} ]\newline\newline
         G. S. Coch, S. Nelsen, \textbf{N. Kunz}, K. Warner, ``Seeking Refuge: The Geography of Migrant Deaths Along the US-MX Border," Grad. Sch. of Arch., Plan., and Pres. (GSAPP), Columbia Univ., New York, NY, 2017. [Online]. Available:\newline\newline
         \faTrain\space GSAPP [ \href{https://www.arch.columbia.edu/student-work/4895}{\texttt{Link}} ]\space\faMedium\space Medium [ \href{https://medium.com/data-mining-the-city/seeking-refuge-the-geography-of-migrant-deaths-near-the-us-mx-border-b0f8f8be84ec}{\texttt{Link}} ]\newline\newline
-        N. Kunz, ``Health \& Wellness Alliance for Children: Children's Asthma, Healthy Physical Environments," Dallas County, Texas, bcWORKSHOP, Dallas, TX, 2014. [Online]. Available:\newline\newline
+        \textbf{N. Kunz}, ``Health \& Wellness Alliance for Children: Children's Asthma, Healthy Physical Environments," Dallas County, Texas, bcWORKSHOP, Dallas, TX, 2014. [Online]. Available:\newline\newline
         \faBook\space Issuu [ \href{https://issuu.com/nickkunz/docs/asthma}{\texttt{Link}} ]\newline\newline
-        N. Kunz, ``The Bexar Street Corridor: A Century in Development," Dallas, Texas, bcWORKSHOP, Dallas, TX, 2013. [Online]. Available:\newline\newline
+        \textbf{N. Kunz}, ``The Bexar Street Corridor: A Century in Development," Dallas, Texas, bcWORKSHOP, Dallas, TX, 2013. [Online]. Available:\newline\newline
         \faBook\space Issuu [ \href{https://issuu.com/nickkunz/docs/bexar_present}{\texttt{Link}} ]\space\faBook\space Issuu [ \href{https://issuu.com/nickkunz/docs/bexar}{\texttt{Link}} ]\space\faHome\space bc [ \href{https://www.bcworkshop.org/posts/bexar-street-corridor}{\texttt{Link}} ]\space\faVimeo\space Vimeo [ \href{https://vimeo.com/81649797}{\texttt{Link}} ]\newline\newline
-        N. Kunz, ``Fenway-Kenmore Square: Comprehensive Planning \& Finance," Cambridge, Massachusetts, Grad. Sch. of Design (GSD), Harvard Univ., Cambridge, MA, 2012. [Online]. Available:\newline\newline
+        \textbf{N. Kunz}, ``Fenway-Kenmore Square: Comprehensive Planning \& Finance," Cambridge, Massachusetts, Grad. Sch. of Design (GSD), Harvard Univ., Cambridge, MA, 2012. [Online]. Available:\newline\newline
         \faBook\space Issuu [ \href{https://issuu.com/nickkunz/docs/fenway_kenmore}{\texttt{Link}} ]\newline\newline
-        N. Kunz, ``Design Representation: Analog Modeling \& Hand Drafting," Grad. Sch. of Design (GSD), Harvard Univ., Cambridge, MA, 2012. [Online]. Available:\newline\newline
+        \textbf{N. Kunz}, ``Design Representation: Analog Modeling \& Hand Drafting," Grad. Sch. of Design (GSD), Harvard Univ., Cambridge, MA, 2012. [Online]. Available:\newline\newline
         \faBook\space Issuu [ \href{https://issuu.com/nickkunz/docs/design_rep}{\texttt{Link}} ]\newline\newline
-        N. Kunz, ``Danelle Plaza: Complete Street Mobility Planning," Tempe, Arizona, Herberger Inst. for Des. and the Art., Arizona State Univ., Tempe, AZ, 2012. [Online]. Available:\newline\newline
+        \textbf{N. Kunz}, ``Danelle Plaza: Complete Street Mobility Planning," Tempe, Arizona, Herberger Inst. for Des. and the Art., Arizona State Univ., Tempe, AZ, 2012. [Online]. Available:\newline\newline
         \faBook\space Issuu [ \href{https://issuu.com/nickkunz/docs/danelle_plaza}{\texttt{Link}} ]\newline\newline
-        N. Kunz, ``Ascension: Multifamily Mixed-Use Real Estate Development Proposal," Tempe, Arizona, Independent Project, Phoenix, AZ, 2012. [Online]. Available:\newline\newline
+        \textbf{N. Kunz}, ``Ascension: Multifamily Mixed-Use Real Estate Development Proposal," Tempe, Arizona, Independent Project, Phoenix, AZ, 2012. [Online]. Available:\newline\newline
         \faBook\space Issuu [ \href{https://issuu.com/nickkunz/docs/ascension}{\texttt{Link}} ]
-        N. Kunz, ``Sui Residence: Second Story Architectural Design," Paradise Valley, Arizona, Independent Project, Phoenix, AZ, 2011. [Online]. Available:\newline\newline
+        \newline\newline
+        \textbf{N. Kunz}, ``Sui Residence: Second Story Architectural Design," Paradise Valley, Arizona, Independent Project, Phoenix, AZ, 2011. [Online]. Available:\newline\newline
         \faBook\space Issuu [ \href{https://issuu.com/nickkunz/docs/sui}{\texttt{Link}} ]
     \section*{Professional Experience}
         \textbf{Deloitte} | Seattle, WA\hfill{2021 - 2025}\newline
-        Senior Data Scientist\newline\
+        Senior Data Scientist\newline
         \textit{Artificial Intelligence}\space\href{https://www.deloitte.com/us/en/services/consulting/services/artificial-intelligence-and-data.html}{\texttt{[Link]}}\newline\newline
         \textbf{Microsoft} | Redmond, WA\hfill{2020 - 2021}\newline
         Data Scientist\newline
@@ -207,7 +219,7 @@ My research interests are at the intersection of data science, machine learning,
         \textbf{Global Geolocated Realtime Data}, Flash Talks, Cornell University | Ithaca, NY\hfill{2023}\newline
         \textbf{Emerging Technology Workshop}, Countryside Angels Talks, Ag Ventures Alliance | Mason City, IA\hfill{2021}\newline
         \textbf{Planning Paths in Private Tech}, Alumni Panel, Columbia GSAPP | New York, NY \href{https://cdn.filepicker.io/api/file/GVI4hgAQrSz6QGOp66Ox?&fit=max}{\texttt{[Link]}} \hfill{2021} \newline
-        \textbf{Cloudy Night}, End of Year Show, Columbia GSAPP | New York, NY \href{https://www.arch.columbia.edu/exhibitions/113-end-of-year-show-2019}{[Link]}\hfill{2019}\newline
+        \textbf{Cloudy Night}, End of Year Show, Columbia GSAPP | New York, NY \href{https://www.arch.columbia.edu/exhibitions/113-end-of-year-show-2019}{\texttt{[Link]}}\hfill{2019}\newline
         \textbf{Restructuring Quarto Workshop}, Municipality of Genoa | Genoa, IT \href{https://www.youtube.com/watch?v=NaVhil1sQfY}{\texttt{[Link]}} \hfill{2018}\newline
         \textbf{The Bexar Street Corridor}, US Congresswoman Eddie Bernice Johnson's Office | Dallas, TX\hfill{2014}\newline
         \textbf{The Bexar Street Corridor}, TR Hoover Community Development Corporation | Dallas, TX\hfill{2014}\newline
@@ -218,7 +230,7 @@ My research interests are at the intersection of data science, machine learning,
         \textbf{Spotlights: Nick Kunz}, Cornell Systems Engineering | Ithaca, NY \href{https://www.systemseng.cornell.edu/spotlights/nick-kunz-dont-be-afraid-ask-questions}{\texttt{[Link]}} \hfill{2023}\newline
         \textbf{Meet the N-K Alumni Nick Kunz}, Northwood Anchor, Vol. 126, No. 41, Pg. 4 | Northwood, IA \href{http://nwdanchor.com/sites/default/files/2022anchor41.pdf}{\texttt{[Link]}} \hfill{2022}\newline
         \textbf{With Special Guest, Nick Kunz}, TWA Family Hour Podcast | Seattle, WA \href{https://open.spotify.com/episode/0l8c8KgPqvf0BZSTIMbufI?si=a6d964dfb0b7439b}{\texttt{[Link]}} \hfill{2020}\newline
-        \textbf{Restructuring Fourth Workshop}, Municipality of Genoa Press | Genoa, IT\space 
+        \textbf{Restructuring Quarto Workshop}, Municipality of Genoa Press | Genoa, IT\space 
         \href{https://www2.comune.genova.it//content/restructuring-quarto-workshop-le-idee-degli-studenti-della-columbia-university-l39ex-op}{\texttt{[Link]}} \hfill{2018}\newline
         \textbf{Achievement Oriented: Nick Kunz}, ASU Magazine, Vol. 20, No. 2, Pg. 7 | Tempe, AZ\space 
         % \href{https://news.asu.edu/sites/default/files/december_2016.pdf}{\texttt{[Link]}} 
@@ -248,7 +260,7 @@ My research interests are at the intersection of data science, machine learning,
         \textbf{Global War on Terrorism Service Medal}, US Army, 75th Ranger Regiment | Fort Lewis, WA\hfill{2016}\newline
         \textbf{Driver Badge, Wheeled Vehicle Component Bar}, US Army, 75th Ranger Regiment | Fort Lewis, WA\hfill{2015}\newline
         \textbf{Parachutist Badge, Unit Trimming}, US Army, 507th Parachute Infantry Regiment | Fort Benning, GA\hfill{2014}\newline
-        \textbf{Infantry Blue Chord Fourragère}, US Army, 19th Infantry Regiment | Fort Benning, GA\hfill{2014}\newline
+        \textbf{Infantry Blue Cord Fourragère}, US Army, 19th Infantry Regiment | Fort Benning, GA\hfill{2014}\newline
         \textbf{National Defense Service Medal}, US Army, 19th Infantry Regiment | Fort Benning, GA\hfill{2014}\newline
         \textbf{Army Service Ribbon}, US Army, 19th Infantry Regiment | Fort Benning, GA\hfill{2014}
     \section*{Civil Service}
@@ -281,8 +293,8 @@ My research interests are at the intersection of data science, machine learning,
         \textbf{Visualization}: Matplotlib, Seaborn, Plotly, Processing, Shiny, ggplot\newline
         \textbf{Statistical Learning}: Scikit-Learn, XGBoost, LightGBM, CatBoost\newline
         \textbf{Reinforcement Learning}: OpenAI Baselines, Stable Baselines\newline
-        \textbf{AI Engineering}: Pinecone, Langchain, LangGraph\newline
-        \textbf{Deep Learning}: Pytorch, TensorFlow, ONNX
+        \textbf{AI Engineering}: Pinecone, LangChain, LangGraph\newline
+        \textbf{Deep Learning}: PyTorch, TensorFlow, ONNX
     \subsection*{Deployment}
         \textbf{DevOps}: Git, Ubuntu, Docker, CI/CD\newline
         \textbf{Databases}: PostgreSQL, SQLite, CosmosDB, Neo4j\newline
@@ -313,7 +325,7 @@ My research interests are at the intersection of data science, machine learning,
         \textbf{All Stars Tour} | US\hfill{2012}\newline
         The Word Alive \textit{(Fearless Records)}, Guitar Tech\newline
         A Skylit Drive \textit{(Fearless Records)}, Guitar Tech\newline\newline
-        \textbf{Van's Warped Tour} | US \& Canada\hfill{2011}\newline
+        \textbf{Vans Warped Tour} | US \& Canada\hfill{2011}\newline
         The Word Alive \textit{(Fearless Records)}, Co-Tour Manager\newline
         Of Mice \& Men \textit{(Rise Records)}, Guitar Tech\newline\newline
         \textbf{Regional Performances} | US\hfill{2011}\newline
